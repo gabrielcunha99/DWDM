@@ -1,0 +1,688 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.backplay {
+    background-image: url(../imagens/imgps/backplay.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+.backx {
+    background-image: url(../imagens/imgx/backxbox.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.backnii {
+    background-image: url(../imagens/imgni/backnii.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.backcontato {
+    background-image: url(../imagens/backgroundcontato.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.aviso {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap; /* Evita a quebra de linha */
+    overflow: hidden; /* Esconde o texto que ultrapassa a largura */
+    animation-fill-mode: forwards;
+    color: rgb(250, 255, 255);
+    font-size: xx-large;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(100%); } /* Inicia a animação fora do campo de visão */
+    100% { transform: translateX(-100%); } /* Move o texto até o final */
+  }
+
+  .avisocontato {
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    position: relative;
+  }
+  
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+
+
+  .avisox,
+  .avisoni,
+  .avisoplay {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    position: relative;
+    animation: heartbeat 2.5s ease-in-out infinite;
+    
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+
+body {
+    background-image: linear-gradient(to right, rgb(153, 136, 136), rgb(20, 20, 18));
+}
+
+
+header {
+    background-image: url(../imagens/BACKGROUND.jpg);
+    background-size: auto;
+
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+header .logo {
+    width: 200px;
+    margin: 10px;
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 30px;
+}
+header .main-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin-left: 10%;
+}
+
+header .main-nav a {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+header .main-nav li {
+    padding: 12px;
+    border-right: solid 4px transparent;
+    border-bottom: solid 4px transparent;
+    transition: border-right 0.3s, border-bottom 0.3s;
+}
+
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+    word-spacing: 7px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;    
+}
+
+header a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1092px) {
+    header .main-nav {
+        margin-left: 5%;
+    }
+
+    header .logo {
+        width: 120px;
+    }
+}
+
+header .main-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin-left: 30%;
+}
+
+header .main-nav a {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+header .main-nav li {
+    padding-bottom: 12px;
+    padding-right: 12px;
+    border-right: solid 4px transparent;
+    border-bottom: solid 4px transparent;
+    transition: border-right 0.3s, border-bottom 0.3s;
+    border: #ffffff;
+    border-style:ridge;
+    border-radius: 5px;
+    
+}
+
+
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+    word-spacing: 7px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.btn:link,
+.btn:visited {
+    border: solid rgb(24, 23, 22);
+    border-radius: 20px;
+    padding: 5px 30px;
+    margin-right: 10px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.btn-full {
+    color: #fff;
+    background-color: rgb(14, 59, 185);
+}
+
+.btn-full,
+.btn-full:hover,
+.btn-full:active {
+    border: solid rgb(24, 23, 22);
+    border-radius: 20px;
+    padding: 5px 30px;
+    margin-right: 10px;
+    transition: background-color 2s ease, border-color 2s ease, color 2s ease, font-size 2s ease;
+}
+
+.btn-full {
+    color: #ffffff;
+    background-color: rgb(36, 36, 35);
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: rgb(106, 255, 138);
+    color: #141414;
+    border-color: #141414;
+    font-size: x-large;
+}
+
+.btn-full:not(:hover):not(:active) {
+    transition: background-color 2s ease, border-color 2s ease, color 2s ease, font-size 2s ease;
+    background-color: rgb(25, 26, 25);
+    border-color: rgb(24, 23, 22);
+    color: #fff;
+    font-size: inherit;
+}
+
+.btn-ghost {
+    color: rgb(34, 33, 32);
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: rgb(14, 13, 13);
+    border-color: rgb(248, 247, 244);
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    header .main-nav {
+        margin-left: 10%;
+    }
+
+    header .logo {
+        width: 150px;
+        margin-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        height: auto;
+        text-align: center;
+    }
+
+    header .main-nav {
+        display: none;
+    }
+
+    header .logo {
+        margin: 15px;
+    }
+}
+
+.image-rownintendo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    background-image: linear-gradient(to right, rgb(126, 100, 100), rgb(15, 15, 15));
+    border-radius: 5px;
+    justify-items: center; /* Centraliza as imagens horizontalmente */
+    align-items: center; /* Centraliza as imagens verticalmente */
+  }
+  
+  .image-rownintendo img {
+    width: 200px; /* Tamanho padrão das imagens */
+  }
+  
+  @media (max-width: 768px) {
+    .image-rownintendo img {
+      width: 150px; /* Tamanho menor das imagens quando a tela for menor que 768px */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-rownintendo img {
+      width: 100px; /* Tamanho ainda menor das imagens quando a tela for menor que 480px */
+    }
+  }
+  
+  
+  
+
+
+
+.navcontato,
+.navplay,
+.navx,
+.navnintendo {
+    font-size: 3rem;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    margin: 0 auto;
+}
+
+
+.navform,
+.navloc{
+    text-align: center;
+    background-color: #000;
+    color: white;
+}
+.navplay {
+    background-color: blue;
+}
+
+.navx {
+    background-color: rgb(8, 245, 8);
+}
+
+.navnintendo {
+    background-color: red;
+}
+
+.navform,
+.navloc,
+.navcontato,
+.navplaystaion,
+.navxbox,
+.navni1 {
+    border-right: solid 4px transparent;
+    border-bottom: solid 4px transparent;
+    transition: border-right 1s ease, border-bottom 1s ease, font-size 1s ease;
+    font-style: italic;
+    font-size: xx-large;
+    font-size: 2rem;
+}
+
+.navplaystaion:hover {
+    border-right: solid 4px blue;
+    border-bottom: solid 4px blue;
+    font-size: xx-large;
+    
+}
+
+.navxbox:hover {
+    border-right: solid 4px rgb(8, 245, 8);
+    border-bottom: solid 4px rgb(8, 245, 8);
+    font-size: xx-large;
+}
+
+.navni1:hover {
+    border-right: solid 4px red;
+    border-bottom: solid 4px red;
+    font-size: xx-large;
+}
+.navcontato:hover{
+    border-right: solid 4px cyan;
+    border-bottom: solid 4px cyan;
+    font-size: xx-large;
+
+}
+
+
+.textheader {
+    text-align: center;
+}
+
+.image-row {
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-row img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+@media only screen and (max-width: 480px) {
+
+
+    .image-row img {
+        height: 150px;
+    }
+}
+
+.image-row img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 1.0s ease;
+}
+
+.image-row img:hover {
+    transform: scale(1.3);
+}
+
+.image-row img:not(:hover) {
+    transition: transform 1.0s ease;
+    transform: scale(1);
+}
+
+.gblgames{
+    font-size: xx-large;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: linear-gradient(rgb(247, 244, 244), rgb(176, 180, 241));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+.formularios {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    color: #ffffff;
+    border: 5px solid #888888;
+    border-radius: 40px;
+    margin-bottom: 40px;
+}
+
+#checkbox {
+    width: auto;
+}
+
+@media screen and (max-width: 620px) {
+    .btn-contratar {
+        margin: 10px 0;
+    }
+}
+
+.bloco1,
+.bloco2 {
+    margin: 0 20px;
+}
+
+@media screen and (max-width: 480px) {
+    form {
+        border: none;
+    }
+    bloco1,
+    bloco2 {
+        margin: auto 0;
+    }
+}
+h2{
+    text-align: center;
+}
+iframe{
+    border-radius: 5px;
+    
+}
+
+.bloco1,
+.bloco2{
+    text-align: center  ;
+}
+section{
+    text-align: center;
+}
+/* Estilos para dispositivos com largura igual ou inferior a 768px */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .logo, .gblgames, .navplaystaion, .navxbox, .navni1, .navcontato, .avisocontato, .navloc {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .mapa {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Estilos para dispositivos com largura igual ou superior a 768px */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .logo, .gblgames, .navplaystaion, .navxbox, .navni1, .navcontato, .avisocontato, .navloc {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .formularios {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mapa {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+@media (max-width: 768px) {
+   
+    iframe {
+      height: 300px;
+    }
+  }
+
+  
+footer{
+    text-align: center;
+    background-color: white;
+}
+.menu-toggle {
+    display: none;
+  }
+  @media (max-width: 599px) {
+    .menu-toggle{
+      display: block;
+    }
+    
+  
+    nav {
+      display: none;
+    }
+  
+    nav ul {
+      flex-direction:column;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+  
+    .menu-toggle:checked~nav {
+      display: block;
+    }
+  
+    button {
+      margin: 1%;
+    }
+  
+    nav ul li a {
+      font-size: small;
+      padding: 0%;
+      bottom: 0%;
+    }
+  }
+  nav.mostrar {
+    display: block;
+  }
+  @media only screen and (max-width: 768px) {
+    .main-nav li:not(:first-child) {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: inline-block;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      font-size: 1.6rem;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  
+    .menu-toggle:focus {
+      outline: none;
+    }
+  
+    .main-nav.expanded li {
+      display: block;
+    }
+  }
+  .botão{
+    text-align: center;
+    margin-top: 1px;
+  }
+
+  
+
+  

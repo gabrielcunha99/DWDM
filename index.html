@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="css/carousel.css">
+
+
+    <title>Gbl Games</title>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div>
+                <img class="logo" src="imagens/logo.png"">
+                <h2 class=" gblgames">Gbl Games</h2>
+            </div>
+            <ul class="main-nav">
+                <button class="menu-toggle">&#9776;</button>
+                <li><a href="Playstation.html" class="navplaystaion">Play<i class="bi bi-playstation"></i></a>
+                </li>
+                <li><a href="X-box.html" class="navxbox">X-box<i class="bi bi-xbox"></i></a></li>
+                <li><a href="Nintendo.html" class="navni1">Nintendo <i class="bi bi-nintendo-switch"></i></a></li>
+                <li><a href="contato.html" class="navcontato">Contato <i class="bi bi-telephone"></i></a></li>
+            </ul>
+        </nav>
+        <br><br><br><br>
+        <div class="textheader">
+            <h1 class="aviso"> Loja especializada em produtos de Playstation,X-box e Nintendo.<br />
+                <i class="bi bi-headset"></i>
+                <i class="bi bi-joystick"></i>
+                <i class="bi bi-controller"></i>
+            </h1>
+            <br><br>
+
+            <a class="btn btn-full" href="#">
+                <i class="bi bi-arrow-down-circle-fill"></i>
+                <span>Conheça nossos produtos</span>
+                <i class="bi bi-arrow-down-circle-fill"></i>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <div class="carousel">
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WDvFz2LL1WI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/C_IdgsdHwAo"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jFtk_7tvAVc"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="botão">
+            <button id="prevBtn">Anterior</button>
+            <button id="nextBtn">Próximo</button>
+        </div>
+        <br>
+        <hr>
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.style.display = 'block';
+                    } else {
+                        slide.style.display = 'none';
+                    }
+                });
+            }
+
+            function goToPrevSlide() {
+                currentIndex--;
+                if (currentIndex < 0) {
+                    currentIndex = slides.length - 1;
+                }
+                showSlide(currentIndex);
+            }
+
+            function goToNextSlide() {
+                currentIndex++;
+                if (currentIndex >= slides.length) {
+                    currentIndex = 0;
+                }
+                showSlide(currentIndex);
+            }
+
+            prevBtn.addEventListener('click', goToPrevSlide);
+            nextBtn.addEventListener('click', goToNextSlide);
+
+            // Exibindo o primeiro slide ao carregar a página
+            showSlide(currentIndex);
+        </script>
+
+
+
+        <br><br>
+        <nav class="navplay">Playstation <i class="bi bi-playstation"></i> </nav>
+        <br><br>
+        <div class="image-row">
+            <a href="Playstation.html"><img src="imagens/imgps/ps1.png" height="200px" width="200px"></a>
+            <a href="Playstation.html"><img src="imagens/imgps/ps2.png" height="200px" width="200px"></a>
+            <a href="Playstation.html"><img src="imagens/imgps/ps3.png" height="200px" width="200px"></a>
+            <a href="Playstation.html"><img src="imagens/imgps/ps4.png" height="200px" width="200px"></a>
+            <a href="Playstation.html"><img src="imagens/imgps/ps5.png" height="200px" width="200px"></a>
+        </div>
+    <div class="banners">
+        <img src="imagens/banner1.png" width="100%" height="">
+    </div>    
+    
+    </div>
+
+        <br><br>    
+        <nav class="navx">X-box <i class="bi bi-xbox"></i> </nav>
+        <br><br>
+        <div class="image-row">
+            <div>
+            <a href="X-box.html"> <img src="imagens/imgx/x1.png" height="200px" width="200px"></a>
+            <a href="X-box.html"><img src="imagens/imgx/x2.png" height="200px" width="200px"></a>
+            <a href="X-box.html"> <img src="imagens/imgx/x3.png" height="200px" width="200px"></a>
+            <a href="X-box.html"><img src="imagens/imgx/x4.png" height="200px" width="200px"></a>
+            <a href="X-box.html"><img src="imagens/imgx/x5.png" height="200px" width="200px"></a>
+        </div>
+        <div>
+            <img src="imagens/imgx/controlex6.png" height="200px" width="200px">
+            <img src="imagens/imgx/controlex7.png" height="200px" width="200px">
+            <img src="imagens/imgx/controlex8.png" height="200px" width="200px">
+            <img src="imagens/imgx/controlex9.png" height="200px" width="200px">
+            <img src="imagens/imgx/controlex10.png" height="200px" width="200px">
+        </div>
+        <br><br>
+        
+    
+       
+
+    </main>
+    
+    <hr><br>
+    <footer>
+        <img class="pagamento" src="imagens/pagamentos.png" width="25%" height="10%">
+    </footer>
+
+
+
+
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('mostrar');
+        });
+    </script>
+
+
+</body>
+
+</html>
